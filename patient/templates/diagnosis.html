@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Diagnosis{% endblock %}
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">SAVE DIAGNOSIS</button>
+</form>
+{% endblock %}

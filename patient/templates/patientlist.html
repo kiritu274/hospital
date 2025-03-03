@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Patient List{% endblock %}
+{% block content %}
+<table class="table">
+  <thead>
+  <tr>
+    <h2 STYLE="text-align: center"><b>PATIENTS LIST</b></h2>
+    <th>FIRST NAME</th>
+    <th>LAST NAME</th>
+    <th>EMAIL</th>
+    <th>AGE</th>
+    <th>GENDER</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  {% for patient in patients %}
+  <tr>
+    <td>{{ patient.first_name }}</td>
+    <td>{{ patient.last_name }}</td>
+    <td>{{ patient.email }}</td>
+    <td>{{ patient.age }}</td>
+    <td>{{ patient.gender }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+
+
+
+</table>
+
+
+
+{% endblock %}

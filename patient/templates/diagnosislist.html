@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Diagnosis List{% endblock %}
+{% block content %}
+<table class="table">
+  <thead>
+  <tr>
+    <h2 STYLE="text-align: center"><b>Diagnosis List</b></h2>
+    <th>PATIENT</th>
+    <th>DOCTOR</th>
+    <th>DIAGNOSIS</th>
+    <th>DATE_DIAGNOSED</th>
+
+  </tr>
+
+  </thead>
+  <tbody>
+  {% for diagnosis in diagnosis %}
+  <tr>
+    <td>{{ diagnosis.patient }}</td>
+    <td>{{ diagnosis.doctor }}</td>
+    <td>{{ diagnosis.diagnosis }}</td>
+    <td>{{ diagnosis.date_diagnosed }}</td>
+
+  </tr>
+  {% endfor %}
+  </tbody>
+
+
+
+</table>
+
+
+
+{% endblock %}
