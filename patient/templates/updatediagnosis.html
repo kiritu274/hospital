@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Update Diagnosis{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h2>Update Diagnosis Form</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-success">UPDATE DIAGNOSIS</button>
+
+
+
+</form>
+
+
+    </div>
+    <div class="col-md-3"></div>
+
+
+
+</div>
+
+
+{% endblock %}

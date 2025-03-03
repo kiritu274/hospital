@@ -20,6 +20,8 @@
     <td>{{ diagnosis.doctor }}</td>
     <td>{{ diagnosis.diagnosis }}</td>
     <td>{{ diagnosis.date_diagnosed }}</td>
+    <td><a href="{% url 'updatediagnosis' diagnosis.id %}" class="btn btn-success" type="button">UPDATE DIAGNOSIS</a></td>
+    <td><a href="{% url 'deletediagnosis' diagnosis.id %}" class="btn btn-danger" type="button" onclick="return confirm('Are you sure you want to delete')">DELETE DIAGNOSIS</a></td>
 
   </tr>
   {% endfor %}
