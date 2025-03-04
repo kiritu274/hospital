@@ -15,6 +15,11 @@ class PatientForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter your email'}),
             'age': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter your age'}),
             'gender': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter your gender'}),
+            'image': forms.ClearableFileInput(
+                attrs={'class': 'form-control',
+                       'accept': 'image/*',
+                       'title': 'Select an image'}
+            ),
         }
 
 class DiagnosisForm(forms.ModelForm):

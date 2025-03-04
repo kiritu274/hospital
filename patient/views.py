@@ -11,7 +11,7 @@ from patient.models import Patient, Diagnosis
 # Create your views here.
 def index(request):
     if request.method == "POST":
-        form = PatientForm(request.POST)
+        form = PatientForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return redirect('index')
@@ -52,7 +52,7 @@ def diagnosislist(request):
 def updatepatient(request,id):
     patient = get_object_or_404(Patient, id=id)
     if request.method == "POST":
-        form = PatientForm(request.POST,instance= patient)
+        form = PatientForm(request.POST,request.FILES,instance= patient)
         if form.is_valid():
             form.save()
             return redirect('patientlist')

@@ -5,6 +5,7 @@
   <thead>
   <tr>
     <h2 STYLE="text-align: center"><b>PATIENTS LIST</b></h2>
+    <th>PICTURE</th>
     <th>FIRST NAME</th>
     <th>LAST NAME</th>
     <th>EMAIL</th>
@@ -16,6 +17,14 @@
   <tbody>
   {% for patient in patients %}
   <tr>
+    <td>
+      {% if patient.image %}
+      <img src="{{ patient.image.url }}" alt="" style="width: 40px;height: 40px">
+      {% else %}
+
+      <i class="fa-solid fa-user"></i>
+      {% endif %}
+    </td>
     <td>{{ patient.first_name }}</td>
     <td>{{ patient.last_name }}</td>
     <td>{{ patient.email }}</td>
