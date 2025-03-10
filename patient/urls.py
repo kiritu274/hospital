@@ -29,4 +29,8 @@ urlpatterns = [
     path('deletepatient/<int:id>/', views.deletepatient, name='deletepatient'),
     path('updatediagnosis/<int:id>/', views.updatediagnosis, name='updatediagnosis'),
     path('deletediagnosis/<int:id>/', views.deletediagnosis, name='deletediagnosis'),
+    path('patientapi/', views.patientapi, name='patientapi'),
+    path('diagnosisapi/', views.diagnosisapi, name='diagnosisapi'),
+    path('doctorapi/', views.doctorapi, name='doctorapi'),
+    path('stk_push/',views.mpesaapi,name='stk_push'),
 ]

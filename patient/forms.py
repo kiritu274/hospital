@@ -31,3 +31,4 @@ class DoctorForm(forms.ModelForm):
     class Meta:
         model = Doctor
         fields = '__all__'
+
